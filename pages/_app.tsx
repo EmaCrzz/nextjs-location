@@ -1,10 +1,13 @@
 import type { AppProps } from 'next/app'
 
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
+
+import customTheme from '../theme'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={customTheme}>
+      <ColorModeScript initialColorMode={customTheme.config.initialColorMode} />
       <Component {...pageProps} />
     </ChakraProvider>
   )

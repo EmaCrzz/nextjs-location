@@ -1,3 +1,13 @@
+import { Input as ChakraInput, Stack } from '@chakra-ui/react'
+
+import Input from '../components/Input'
+
 export default function Home() {
-  return <div>Holis</div>
+  return (
+    <Stack padding={4}>
+      <ChakraInput placeholder="Basic" />
+      <Input readOnly label="Nombre" value="Emanuel" />
+      <Input label="Apellido" value="Emanuel" />
+    </Stack>
+  )
 }

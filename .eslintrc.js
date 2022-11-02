@@ -2,20 +2,20 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
   extends: [
     'plugin:react/recommended',
     'plugin:prettier/recommended',
-    'plugin:react-hooks/recommended',
+    'plugin:react-hooks/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 'latest',
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['react', 'prettier', 'import', '@typescript-eslint'],
   rules: {
@@ -24,26 +24,27 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/no-children-prop': 'off',
     'prettier/prettier': [
       'warn',
       {
         printWidth: 100,
-        trailingComma: 'all',
+        trailingComma: 'none',
         tabWidth: 2,
         semi: false,
         singleQuote: true,
         bracketSpacing: true,
         arrowParens: 'always',
-        endOfLine: 'auto',
-      },
+        endOfLine: 'auto'
+      }
     ],
     '@typescript-eslint/no-unused-vars': [
       'warn',
       {
         args: 'after-used',
         ignoreRestSiblings: false,
-        argsIgnorePattern: '^_.*?$',
-      },
+        argsIgnorePattern: '^_.*?$'
+      }
     ],
     'import/order': [
       'warn',
@@ -53,11 +54,11 @@ module.exports = {
           {
             pattern: '~/**',
             group: 'external',
-            position: 'after',
-          },
+            position: 'after'
+          }
         ],
-        'newlines-between': 'always',
-      },
+        'newlines-between': 'always'
+      }
     ],
     'react/self-closing-comp': 'warn',
     'react/jsx-sort-props': [
@@ -66,8 +67,8 @@ module.exports = {
         callbacksLast: true,
         shorthandFirst: true,
         noSortAlphabetically: false,
-        reservedFirst: true,
-      },
+        reservedFirst: true
+      }
     ],
     'padding-line-between-statements': [
       'warn',
@@ -76,8 +77,8 @@ module.exports = {
       {
         blankLine: 'any',
         prev: ['const', 'let', 'var'],
-        next: ['const', 'let', 'var'],
-      },
-    ],
-  },
+        next: ['const', 'let', 'var']
+      }
+    ]
+  }
 }
