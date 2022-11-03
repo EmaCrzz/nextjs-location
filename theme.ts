@@ -2,18 +2,6 @@ import { theme, extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
 
 const Input = {
-  // variants: {
-  //   outlineBackgroundFix: (props) => ({
-  //     field: {
-  //       ...theme.components.Input.variants.outline(props).field,
-  //       borderRadius: 9999,
-  //       bg: '#333',
-  //     },
-  //   }),
-  // },
-  // defaultProps: {
-  //   variant: 'outlineBackgroundFix',
-  // },
   sizes: {
     md: {
       field: {
@@ -31,7 +19,7 @@ const Form = {
   variants: {
     floating: {
       container: {
-        '[data-readonly="true"]': { ...activeLabelStyles },
+        '[data-transform="true"]': { ...activeLabelStyles },
         '.chakra-input__right-element': {
           width: 70
         },

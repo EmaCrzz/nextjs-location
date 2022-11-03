@@ -40,7 +40,7 @@ export default function Input(props: Props) {
         />
         {readOnly && <InputRightElement children={<LockIcon color="white" />} />}
       </InputGroup>
-      <FormLabel ref={labelRef} data-readOnly={readOnly}>
+      <FormLabel ref={labelRef} data-transform={readOnly || !!value}>
         {label}
       </FormLabel>
     </FormControl>
