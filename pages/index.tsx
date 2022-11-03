@@ -8,6 +8,7 @@ export default function Home() {
       <ChakraInput placeholder="Basic" />
       <Input readOnly label="Nombre" value="Emanuel" />
       <Input label="Apellido" value="Emanuel" />
+      <Input label="Fecha de Nacimiento" placeholder="" type="date" />
     </Stack>
   )
 }
